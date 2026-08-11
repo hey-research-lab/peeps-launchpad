@@ -1,0 +1,85 @@
+{
+  "chainId": 4663,
+  "launchEvents": [
+    {
+      "product": "instant-v3",
+      "contract": "PeepsFactory",
+      "address": "0xeE6D48e781c1bA547B63a3d65Db87F67305D1531",
+      "event": "TokenLaunched(address indexed token, address indexed deployer, address indexed dexFactory, address pairToken, address pool, uint256 dexId, uint256 launchConfigId, uint256 positionId, uint256 restrictionsEndBlock, uint256 initialBuyAmount)",
+      "topic0": "0xdb51ea9ad51ab453a65a4cb7e60c3cb378c9501bb002609f8f97778fb6c4235a",
+      "includesMetadataOnEvent": false,
+      "metadataHow": "After TokenLaunched, eth_call token.name(), symbol(), logo(), description(), socials()"
+    },
+    {
+      "product": "instant-v3",
+      "contract": "PeepsFactory",
+      "address": "0xeE6D48e781c1bA547B63a3d65Db87F67305D1531",
+      "event": "TokenDeployed(address indexed token, address indexed deployer, address indexed dexFactory, address pairToken, uint256 dexId, uint256 launchConfigId)",
+      "topic0": "0x1461370115e1c2be79cb529f8cfcbd11316e789d9c6099fc83417b0b4c48c62a",
+      "includesMetadataOnEvent": false,
+      "notes": "Optional pre-launch deploy step; prefer TokenLaunched for completed pairs."
+    },
+    {
+      "product": "instant-v4",
+      "contract": "PeepsV4Factory",
+      "address": "0x60796114CF6Ac0759098788e6d4D1F4774556A34",
+      "event": "V4TokenLaunched(address indexed token, address indexed creator, bytes32 indexed poolId, uint256 ethSeeded, uint256 tokensSeeded)",
+      "topic0": "0xf82f7e27f7fb11c50892cf22734fd0ac1092cfb691e9f13494489fe4d108f155",
+      "includesMetadataOnEvent": false,
+      "metadataHow": "After V4TokenLaunched, eth_call PeepsV4Token name/symbol/logo/description/socials; store poolId for PoolManager.Swap"
+    },
+    {
+      "product": "bonding-v3",
+      "contract": "PeepsBondingV3Factory",
+      "address": "0x84A9Ac2A545B72efed12CD8E8EaB647Af0e3f303",
+      "event": "TokenCreated(address indexed token, address indexed curve, address indexed creator, string name, string symbol, bytes32 metadataHash, string metadataUri, address pool, uint8 graduationCap, uint16 postGradCreatorShareBps)",
+      "topic0": "0x43cba077304f1c1f63fd96c89a7eaa6a9e5072dd485b758962720f60e9cbf253",
+      "includesMetadataOnEvent": true,
+      "metadataHow": "name + symbol + metadataUri + metadataHash are ON the event. Resolve metadataUri (data: JSON, ipfs://, or https) for image/description/socials."
+    },
+    {
+      "product": "bonding-v4",
+      "contract": "PeepsBondingV4Factory",
+      "address": "0xEEb8Ac11e9E70AFb9979204fbD9A0166Ecc28BC9",
+      "event": "TokenCreated(address indexed token, address indexed curve, address indexed creator, string name, string symbol, bytes32 metadataHash, string metadataUri, address pool, uint8 graduationCap, uint16 postGradCreatorShareBps)",
+      "topic0": "0x43cba077304f1c1f63fd96c89a7eaa6a9e5072dd485b758962720f60e9cbf253",
+      "includesMetadataOnEvent": true,
+      "metadataHow": "Same TokenCreated ABI as Bonding V3."
+    }
+  ],
+  "graduationEvents": [
+    {
+      "product": "bonding-v3",
+      "contract": "PeepsBondingV3Migrator",
+      "address": "0xDEAaC50C6fc4Df3C418A82cE0c6C1A3a700096f8",
+      "event": "Graduated(address indexed token, address indexed pool, uint256 indexed tokenId, uint128 liquidity, uint256 wethInPosition, uint256 tokensInPosition, uint256 graduationFee, address caller, uint256 callerReward, uint256 tokensBurned, uint256 wethDustToTreasury)",
+      "topic0": "0xbf9fe601afe730227ff37018b3d97d7c7d4ad6ca179e03eed5a61e3f00f176c8",
+      "poolField": "address pool (Uniswap V3)"
+    },
+    {
+      "product": "bonding-v4",
+      "contract": "PeepsBondingV4Migrator",
+      "address": "0xFa0140f4613484b4eEBFB22005771ab14cBB2b42",
+      "event": "Graduated(address indexed token, bytes32 indexed poolId, uint256 indexed tokenId, uint128 liquidity, uint256 wethInPosition, uint256 tokensInPosition, uint256 graduationFee, address caller, uint256 callerReward, uint256 tokensBurned, uint256 wethDustToTreasury)",
+      "topic0": "0xfd34ff555efaf8c6ab3f10b093d2c022e9142bcea067f8137afdc0ce50692404",
+      "poolField": "bytes32 poolId (Uniswap V4)"
+    }
+  ],
+  "tradeEvents": [
+    {
+      "product": "bonding-curve",
+      "contract": "PeepsBondingCurve (per-token CREATE2)",
+      "event": "Trade(address indexed trader, bool indexed isBuy, uint256 ethAmount, uint256 tokenAmount, uint256 fee, uint256 virtualEthReserves, uint256 virtualTokenReserves, uint256 realEthReserves)",
+      "notes": "Emitted on each per-token PeepsBondingCurve (CREATE2). See abis/shared/PeepsBondingCurve.abi.json."
+    },
+    {
+      "product": "instant-v4",
+      "contract": "PeepsV4SwapRouter",
+      "address": "0x113D8d6D8A97BE12a84e3081E11a70A9feD6FFaC",
+      "event": "GraduatedSwap(address indexed token, address indexed trader, bool isBuy, uint256 ethAmount, uint256 tokenAmount, uint256 platformFee)",
+      "topic0": "0x101203873dffc3fc86fcb1932635d9a767ac027bd8465e22e493df11142f698b",
+      "notes": "Swap fill through Peeps V4 router — not a launch event."
+    }
+  ],
+  "instantGraduationNote": "Instant V3/V4 do NOT emit a migrator Graduated event. Soft graduation is view-only via factory.graduationStatus(token) (paired WETH vs ~4.2 ETH threshold). Liquidity is locked from block 0."
+}

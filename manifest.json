@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-08-11T13:19:19.305Z",
+  "chainId": 4663,
+  "abiFiles": [
+    {
+      "contract": "PeepsFactory",
+      "destRel": "abis/instant-v3/PeepsFactory.abi.json",
+      "entries": 58
+    },
+    {
+      "contract": "PeepsLocker",
+      "destRel": "abis/instant-v3/PeepsLocker.abi.json",
+      "entries": 50
+    },
+    {
+      "contract": "PeepsToken",
+      "destRel": "abis/token-metadata/PeepsToken.abi.json",
+      "entries": 50
+    },
+    {
+      "contract": "PeepsV4Factory",
+      "destRel": "abis/instant-v4/PeepsV4Factory.abi.json",
+      "entries": 46
+    },
+    {
+      "contract": "PeepsV4Registry",
+      "destRel": "abis/instant-v4/PeepsV4Registry.abi.json",
+      "entries": 81
+    },
+    {
+      "contract": "PeepsV4SwapRouter",
+      "destRel": "abis/instant-v4/PeepsV4SwapRouter.abi.json",
+      "entries": 29
+    },
+    {
+      "contract": "PeepsV4TaxHook",
+      "destRel": "abis/instant-v4/PeepsV4TaxHook.abi.json",
+      "entries": 19
+    },
+    {
+      "contract": "PeepsV4LPFeeVault",
+      "destRel": "abis/instant-v4/PeepsV4LPFeeVault.abi.json",
+      "entries": 44
+    },
+    {
+      "contract": "PeepsV4DividendDistributor",
+      "destRel": "abis/instant-v4/PeepsV4DividendDistributor.abi.json",
+      "entries": 40
+    },
+    {
+      "contract": "PeepsV4ClearingHouse",
+      "destRel": "abis/instant-v4/PeepsV4ClearingHouse.abi.json",
+      "entries": 31
+    },
+    {
+      "contract": "PeepsV4Token",
+      "destRel": "abis/token-metadata/PeepsV4Token.abi.json",
+      "entries": 30
+    },
+    {
+      "contract": "PeepsBondingV3Factory",
+      "destRel": "abis/bonding-v3/PeepsBondingV3Factory.abi.json",
+      "entries": 96
+    },
+    {
+      "contract": "PeepsBondingV3Router",
+      "destRel": "abis/bonding-v3/PeepsBondingV3Router.abi.json",
+      "entries": 30
+    },
+    {
+      "contract": "PeepsBondingV3Migrator",
+      "destRel": "abis/bonding-v3/PeepsBondingV3Migrator.abi.json",
+      "entries": 32
+    },
+    {
+      "contract": "PeepsBondingV3LPFeeVault",
+      "destRel": "abis/bonding-v3/PeepsBondingV3LPFeeVault.abi.json",
+      "entries": 31
+    },
+    {
+      "contract": "PeepsBondingV3Token",
+      "destRel": "abis/bonding-v3/PeepsBondingV3Token.abi.json",
+      "entries": 33
+    },
+    {
+      "contract": "PeepsBondingV4Factory",
+      "destRel": "abis/bonding-v4/PeepsBondingV4Factory.abi.json",
+      "entries": 102
+    },
+    {
+      "contract": "PeepsBondingV4Router",
+      "destRel": "abis/bonding-v4/PeepsBondingV4Router.abi.json",
+      "entries": 36
+    },
+    {
+      "contract": "PeepsBondingV4Migrator",
+      "destRel": "abis/bonding-v4/PeepsBondingV4Migrator.abi.json",
+      "entries": 29
+    },
+    {
+      "contract": "PeepsBondingV4TaxStore",
+      "destRel": "abis/bonding-v4/PeepsBondingV4TaxStore.abi.json",
+      "entries": 24
+    },
+    {
+      "contract": "PeepsBondingV4Token",
+      "destRel": "abis/bonding-v4/PeepsBondingV4Token.abi.json",
+      "entries": 34
+    },
+    {
+      "contract": "PeepsBondingCurve",
+      "destRel": "abis/shared/PeepsBondingCurve.abi.json",
+      "entries": 59
+    },
+    {
+      "contract": "PeepsBondingFeeSink",
+      "destRel": "abis/shared/PeepsBondingFeeSink.abi.json",
+      "entries": 9
+    },
+    {
+      "contract": "PeepsAggregatorRouter",
+      "destRel": "abis/shared/PeepsAggregatorRouter.abi.json",
+      "entries": 45
+    },
+    {
+      "contract": "PeepsProtocolFeeRouter",
+      "destRel": "abis/shared/PeepsProtocolFeeRouter.abi.json",
+      "entries": 70
+    },
+    {
+      "contract": "PeepsCurveFactory",
+      "destRel": "abis/shared/PeepsCurveFactory.legacy.abi.json",
+      "entries": 84
+    },
+    {
+      "contract": "PeepsLPFeeVault",
+      "destRel": "abis/shared/PeepsLPFeeVault.legacy.abi.json",
+      "entries": 26
+    }
+  ]
+}
