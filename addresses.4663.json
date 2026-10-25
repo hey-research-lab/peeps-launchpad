@@ -1,7 +1,7 @@
 {
   "chainId": 4663,
   "chainName": "Robinhood Chain Mainnet",
-  "explorer": "https://explorer.robinhoodchain.com",
+  "explorer": "https://robinhoodchain.blockscout.com",
   "shared": {
     "weth": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
     "uniswapV3Factory": "0x1f7d7550B1b028f7571E69A784071F0205FD2EfA",
